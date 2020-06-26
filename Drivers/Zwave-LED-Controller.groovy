@@ -429,14 +429,14 @@ void zwaveEvent(hubitat.zwave.commands.switchcolorv3.SwitchColorSupportedReport 
 void on() {
 	List<hubitat.zwave.Command> cmds=[]
 	cmds.add(zwave.basicV1.basicSet(value: 0xFF))
-	cmds.add(zwave.switchMultilevelV3.switchMultilevelGet())
+	//cmds.add(zwave.switchMultilevelV3.switchMultilevelGet())
 	sendToDevice(cmds)
 }
 
 void off() {
 	List<hubitat.zwave.Command> cmds=[]
 	cmds.add(zwave.basicV1.basicSet(value: 0x00))
-	cmds.add(zwave.switchMultilevelV3.switchMultilevelGet())
+	//cmds.add(zwave.switchMultilevelV3.switchMultilevelGet())
 	sendToDevice(cmds)
 }
 
